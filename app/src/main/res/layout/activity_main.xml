@@ -4,15 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.songxinhong.a001_led.MainActivity">
+    tools:context="com.example.songxinhong.a001_led.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
-    <TextView
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="ALL LED ON"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <CheckBox
+        android:id="@+id/led1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED1"
+        android:textSize="20sp"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintLeft_toLeftOf="@+id/button" />
+
+    <CheckBox
+        android:id="@+id/led2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED2"
+        android:textSize="20sp"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/led1"
+        app:layout_constraintLeft_toLeftOf="@+id/led1" />
+
+    <CheckBox
+        android:id="@+id/led3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED3"
+        android:textSize="20sp"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/led2"
+        app:layout_constraintLeft_toLeftOf="@+id/led2" />
+
+    <CheckBox
+        android:id="@+id/led4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED4"
+        android:textSize="20sp"
+        android:onClick="onCheckboxClicked"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/led3"
+        app:layout_constraintLeft_toLeftOf="@+id/led3" />
+
 
 </android.support.constraint.ConstraintLayout>
