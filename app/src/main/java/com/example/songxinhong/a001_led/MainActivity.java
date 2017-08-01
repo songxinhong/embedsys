@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import com.example.songxinhong.hardlibrary.*;
 
 public class MainActivity extends AppCompatActivity {
     private boolean led_flag=false;
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         final CheckBox led4 = (CheckBox) findViewById(R.id.led4);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Do something in response to button click
+                // Do something in response to button click.
+                HardControl hardControl = new HardControl();
                 led_flag = !led_flag;
                 if (led_flag == false) {
                     button.setText("ALL LED OFF");
